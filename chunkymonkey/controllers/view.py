@@ -58,7 +58,7 @@ class ViewController(BaseController):
 					# Timeout exception
 					break
 				if not data: break
-				total_data.append(data)
+				total_data.append(data.decode('utf-8'))
 			sock.close()
 
 			# Combine all the data

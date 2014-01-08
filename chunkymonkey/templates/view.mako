@@ -51,8 +51,8 @@
 <textarea cols="120" rows="25">
 % try:
 ${chunk['content'] | h}</textarea>
-% except:
-Error reading chunk</textarea>
+% except Exception, e:
+Error reading chunk: ${e}</textarea>
 % endtry
 									</p>
 								% endfor
